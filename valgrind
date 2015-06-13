@@ -1,4 +1,21 @@
-DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+
+#DIR=$(dirname $(realpath $0))
+DIR=$(dirname $(readlink -f -- $0))
+
+
+if [ -z "$TMPDIR" ]; then
+	export TMPDIR=/tmp
+fi
+
+if [ ! -d "$TMPDIR"  -a  -d "/data/local/tmp" ]; then
+	export TMPDIR=/data/local/tmp  
+fi
+
+
+if [ ! -d "$TMPDIR" ]; then
+	echo "TMPDIR must point to a valid tmp directory"
+	exit 1
+fi
 
 export VALGRIND_LIB=$DIR/.in_place
 $DIR/coregrind/valgrind "$@"
