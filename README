@@ -1,3 +1,17 @@
+Notes for Repo
+~~~~~~~~~~~~~~~
+THIS IS NOT AN OFFICIAL REPO!
+
+Modified to work without symlinks, only copy.
+
+Convenience android/arm build script: build_android_valgrind
+Convenience inplace execution: valgrind in root, it sets up TMPDIR and VALGRIND_LIB before executing valgrind
+
+
+
+
+
+
 
 Release notes for Valgrind
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
