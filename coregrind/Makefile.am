@@ -633,7 +633,7 @@ all-local: inplace-noinst_PROGRAMS inplace-noinst_DSYMS
 	mkdir -p $(inplacedir); \
 	for f in $(vglib_DATA); do \
 	  rm -f $(inplacedir)/$$f; \
-	  ln -f -s ../$(subdir)/$$f $(inplacedir); \
+	  cp -f ../$(subdir)/$$f $(inplacedir); \
 	done
 
 clean-local: clean-noinst_DSYMS

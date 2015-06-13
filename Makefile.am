@@ -118,7 +118,7 @@ dist_noinst_SCRIPTS = \
 all-local: default.supp
 	mkdir -p $(inplacedir)
 	rm -f $(inplacedir)/default.supp
-	ln -s ../default.supp $(inplacedir)
+	cp -f ../default.supp $(inplacedir)
 
 clean-local:
 	rm -rf $(inplacedir)

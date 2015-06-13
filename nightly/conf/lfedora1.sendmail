@@ -16,4 +16,4 @@ cat "$diffs"  >> $MAILFILE
 
 MAILLATEST="$HOME/valgrind-results/latest"
 rm -f $MAILLATEST
-ln -s $MAILFILE $MAILLATEST
+cp -f $MAILFILE $MAILLATEST

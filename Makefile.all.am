@@ -38,7 +38,7 @@ inplace-noinst_PROGRAMS: $(noinst_PROGRAMS)
 	mkdir -p $(inplacedir); \
 	for f in $(noinst_PROGRAMS) ; do \
 	  rm -f $(inplacedir)/$$f; \
-	  ln -f -s ../$(subdir)/$$f $(inplacedir); \
+	  cp -f ../$(subdir)/$$f $(inplacedir); \
 	done
 
 # Similar to inplace-noinst_PROGRAMS
@@ -46,7 +46,7 @@ inplace-noinst_DSYMS: build-noinst_DSYMS
 	mkdir -p $(inplacedir); \
 	for f in $(noinst_DSYMS); do \
 	  rm -f $(inplacedir)/$$f.dSYM; \
-	  ln -f -s ../$(subdir)/$$f.dSYM $(inplacedir); \
+	  cp -f ../$(subdir)/$$f.dSYM $(inplacedir); \
 	done
 
 # This is used by coregrind/Makefile.am and by <tool>/Makefile.am for doing

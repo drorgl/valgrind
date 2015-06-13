@@ -14,15 +14,15 @@ pair()
   then
       if ../../tests/arch_test $1
       then
-         ln -f $1/allexec allexec32
+         cp -f $1/allexec allexec32
       else
-         ln -f -s allexec64 allexec32
+         cp -f allexec64 allexec32
       fi
       if ../../tests/arch_test $2
       then
-         ln -f $2/allexec allexec64
+         cp -f $2/allexec allexec64
       else
-         ln -f -s allexec32 allexec64
+         cp -f allexec32 allexec64
       fi
   fi
 }
